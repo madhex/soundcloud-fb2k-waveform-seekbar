@@ -270,14 +270,7 @@ float4 PS(PS_IN input) : SV_Target
 	return color;
 }
 
-technique Render9
-{
-	pass
-	{
-		VertexShader = compile vs_2_0 VS();
-		PixelShader = compile ps_3_0 PS();
-	}
-}
+
 
 technique10 Render10
 {
@@ -286,5 +279,14 @@ technique10 Render10
 		SetGeometryShader(0);
 		SetVertexShader(CompileShader(vs_4_0, VS()));
 		SetPixelShader(CompileShader(ps_4_0, PS()));
+	}
+}
+
+technique Render9
+{
+	pass
+	{
+		VertexShader = compile vs_3_0 VS();
+		PixelShader = compile ps_3_0 PS();
 	}
 }
